@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Created by robotwombat -->
+
+<head>
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <!-- Scale page to display width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Header -->
+  <div class="header">
+    <a class="clickableimage" target="_top" href="./index.html">
+      <img class="headerlogo" src="images/penguin-emoji.svg" alt="Penguin Emoji Logo" style="width:100px; height:100px;">
+    </a>
+    <h1 class="headertitle">Project Penguin</h1>
+    <p class="header">Open-source, ad-free, forever.</p>
+  </div>
+  <!-- Load in scroll top button -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function() {
+      var scrolltop = $("#scrolltop");
+      scrolltop.load("scrolltop.html")
+    });
+  </script>
+  <!-- Page title and favicons -->
+  <title> YAAP Info | Project Penguin </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#33cdc6">
+  <meta name="apple-mobile-web-app-title" content="Project Penguin">
+  <meta name="application-name" content="Project Penguin">
+  <meta name="msapplication-TileColor" content="#33cdc6">
+  <!-- Link preview stuff -->
+  <meta property="og:title" content="YAAP Info" />
+  <meta property="og:description" content="Everything you need to know about YAAP for the OnePlus 7 Series." />
+  <meta property="og:image" content="https://projectpenguin.dev/images/yaap-logo"/>
+</head>
+
+<body>
+  <div id="scrolltop"></div>
+  <div class="onecolumncardholder">
+    <div class="widecard">
+      <img class="cardlogo" src="./images/yaap-logo.jpg">
+      <h3> Yet Another AOSP Project </h3>
+      <button class="uniformsize" type="button" onclick="window.open('https://mirror.codebucket.de/yaap/', '_blank')">Downloads</button>
+      <button class="uniformsize" type="button" onclick="window.open('https://t.me/yaapop7', '_blank')">Telegram</button>
+      <button class="uniformsize" type="button" onclick="window.open('https://github.com/yaap', '_blank')">Source</button>
+      <hr class="cardheader">
+      <button type="button" onclick="window.location.href='#install'">Install</button>
+      <button type="button" onclick="window.location.href='#report'">Report Bugs</button>
+      <button type="button" onclick="window.location.href='#magisk'">Magisk</button>
+      <button type="button" onclick="window.location.href='#faqs'">FAQs</button>
+      <hr class="instructiondivider" id="install">
+      <div class="cardsection">
+        <h3 class="cardsectiontitle"> Installation </h3>
+        <h4 class="cardtextheading"> Getting your computer ready </h4>
+        <p class="cardtext"> If you're on Windows:<br>
+        <ul>
+          <li> Uninstall OnePlus drivers </li>
+          <li> Check for and install all Windows updates</li>
+          <li> Download Google's <a href="https://developer.android.com/studio/releases/platform-tools#downloads">Platform Tools</a></li>
+          <li> Extract the Platform Tools .zip and remember where you put it</li>
+        </ul>
+        </p>
+        <h4 class="cardtextheading"> Getting your phone ready </h4>
+        <p class="cardtext">
+        <ul>
+          <li>You must first unlock the bootloader (Google this)</li>
+        </ul>
+        </p>
+        <h4 class="cardtextheading"> Payload Dump </h4>
+        <p class="cardtext"> Follow these steps closely: <br>
+        <ol>
+          <li>Download the <a href="https://mirror.codebucket.de/yaap/"> latest YAAP build </a> for your device.</li>
+          <li>Download <a href="https://github.com/ssut/payload-dumper-go/releases">payload-dumper-go</a></li>
+          <li>Go to your extracted Platform Tools folder and, while holding the Shift key, right-click and then open terminal</li>
+          <li>Drag the payload-dumper-go file into the terminal, click in the terminal window, press the Spacebar, and then drag the YAAP .zip file into the terminal.</li>
+          <li>Press enter and wait until the script is done.</li>
+        </ol>
+        </p>
+        <h4 class="cardtextheading"> Finally, installation </h4>
+        <p class="cardtext"> Follow these steps closely: <br>
+        <ol>
+          <li>Put your phone into fastboot/bootloader</li>
+          <li>From the Payload Dump, locate the following files depending on your device:</li>
+          <ul>
+            <li>(Hotdogb) <em class="code">recovery.img</em></li>
+            <li>(Other) <em class="code">boot.img</em></li>
+          </ul>
+          Then be ready to drop this file in the terminal during the next step.<br>
+          <li>Then, open a terminal and type the following, depending on your device:</li>
+          <ul>
+            <li>(Hotdogb) <em class="code">fastboot flash recovery recovery.img</em></li>
+            <li>(Other) <em class="code">fastboot flash boot boot.img</em></li>
+          </ul>
+          Then press enter and wait for the command to finish executing.</li>
+          <li>Reboot to recovery by entering this command: fastboot reboot recovery</li>
+          <li>In recovery, wipe system storage</li>
+        </ol>
+        </p>
+      </div>
+      <hr class="instructiondivider" id="report">
+      <div class="cardsection">
+        <h3 class="cardsectiontitle"> Report Bugs </h3>
+      </div>
+      <hr class="instructiondivider" id="magisk">
+      <div class="cardsection">
+        <h3 class="cardsectiontitle"> Magisk </h3>
+        <h4 class="cardtextheading"> Installing Magisk for the first time </h4>
+        <ol>
+          <li>Get boot.img by using #payload_dumper</li>
+          <li>Patch stock boot.img using the magisk app (copy it to your device)</li>
+          <li>Flash on fastboot with fastboot flash boot magisk_patched_xxx.img</li>
+        </ol>
+        <h4 class="cardtextheading"> Update via OTA and retain Magisk </h4>
+        <ul>
+          <li>Just OTA as usual and when OTA is done (before rebooting) install from magisk app to inactive slot.</li>
+        </ul>
+        <h4 class="cardtextheading"> Pass Safetynet </h4>
+        <ol>
+          <li>Fully add gms, gpay and play store to deny list</li>
+          <li>clear storage for gpay and play store (if doesn't work after reboot in 3. also clear gms)</li>
+          <li>Reboot</li>
+        </ol>
+      </div>
+      <hr class="instructiondivider" id="faqs">
+      <div class="cardsection">
+        <h3 class="cardsectiontitle"> FAQs </h3>
+
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://github.com/robotwombat/projectpenguin" style="font-weight: normal;"> Made with ❤️ by Robotwombat </a>
+  </div>
+</body>
+
+</html>

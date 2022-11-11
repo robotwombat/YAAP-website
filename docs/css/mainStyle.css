@@ -1,0 +1,637 @@
+:root {
+  font-family: Arial;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  src: url("../fonts/ProductSans-Regular.ttf");
+  font-family: "productsans";
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto-Medium";
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* ---------- Body ---------- */
+body {
+  text-align: center;
+  font-family: Arial;
+  margin: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+
+hr {
+  width: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 14px;
+}
+
+/* ---------- Header ---------- */
+div.header {
+  width: auto;
+  font-family: productsans;
+  margin: 0px 0px 1em 0px;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  border: 2px hidden black;
+  font-family: productsans;
+  border-top: 0px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+img.headerlogo {
+  margin-top: 0em;
+  background-color: lightblue;
+  border: 2px hidden black;
+  border-radius: 50%;
+}
+
+/* ---------- Footer ---------- */
+div.footer {
+  padding-top: 5em;
+  padding-bottom: 0.8em;
+  font-size: 0.85em;
+  width: 100%;
+  text-align: center;
+  font-family: productsans;
+}
+
+/* ---------- Cards ---------- */
+div.twocolumncardholder {
+  margin-top: 10px;
+  display: inline-grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+div.onecolumncardholder {
+  margin-top: 10px;
+  display: inline-grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: auto;
+  width: auto;
+}
+
+div.twocolumncardholder {
+  margin-top: 10px;
+  display: inline-grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: auto;
+  width: auto;
+}
+
+div.threecolumncardholder {
+  margin-top: 10px;
+  display: inline-grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: auto;
+  width: auto;
+}
+
+div.card {
+  padding: 2.5em 2.5em 2.5em 2.5em;
+  border: 2px hidden black;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+div.widecard {
+  padding: 2.5em 1em 2.5em 1em;
+  border: 2px hidden black;
+  border-radius: 16px;
+}
+
+div.cardsection {
+  margin-top: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 16px;
+}
+
+/* Desktop view */
+@media (min-width: 500px) {
+  div.twocolumncardholder {
+    grid-template-columns: auto auto;
+    min-width: 0%;
+    max-width: 100%;
+    width: 85vw;
+  }
+
+  div.threecolumncardholder {
+    grid-template-columns: auto auto auto;
+    min-width: 0%;
+    max-width: 100%;
+    width: 85vw;
+  }
+  
+  div.card {
+    width: auto;
+    height: auto;
+  }
+
+  div.widecard {
+    width: 80vw;
+    height: auto;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+  div.twocolumncardholder {
+    grid-template-columns: 100%;
+    min-width: 95%;
+    max-width: 100%;
+  }
+
+  div.card {
+    margin: 0px 1em 0px 1em;
+    width: auto;
+    height: auto;
+  }
+
+  div.widecard {
+    margin: 0px 0.5em 0px 0.5em;
+    width: 85vw;
+    height: auto;
+  }
+}
+
+h3.cardsectiontitle {
+  margin-top: 0;
+  border-radius: 14px;
+  padding: 10px 0px 10px 0px;
+}
+
+img.cardicon {
+  width: 5em;
+  height: 5em;
+  align-content: center;
+}
+
+img.cardlogo {
+  width: 5em;
+  height: 5em;
+  align-content: center;
+  border-radius:50%;
+  border: 2px
+  solid black
+}
+
+/* ---------- Text ---------- */
+ol {
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul {
+  line-height: 1.5;
+  text-align: left;
+}
+
+li {
+  margin: 10px 0px 10px 0px;
+}
+
+p.header {
+  margin-bottom: 0;
+}
+
+h1.headertitle {
+  margin-top: 0.3em;
+}
+
+p.cardtext {
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 0.3em;
+  margin-left: 1em;
+  margin-right: 1em;
+  word-wrap: break-word;
+}
+
+p.description {
+  font-size: 14px;
+}
+
+em.code {
+  font-family: monospace;
+  width: min-content;
+  font-style: normal;
+  font-size: 16.5px;
+}
+
+ol.cardtext {
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 0.3em;
+  margin-left: 0em;
+  margin-right: 1em;
+}
+
+ul.cardtext {
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 0.3em;
+  margin-left: 0em;
+  margin-right: 1em;
+}
+
+h4.cardtextheading {
+  text-align: left;
+  margin-bottom: 0.3em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* ---------- Buttons ---------- */
+div.backbutton {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  text-align: center;
+  border: 2px hidden black;
+  border-radius: 15px;
+  height: auto;
+  width: auto;
+  margin: 5px 1px 5px 1px;
+  padding: 8px 15px 8px 15px;
+  font-weight: normal;
+  font-family: Roboto-Medium;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button.uniformsize {
+  width: 8em;
+}
+
+button.scrollTop {
+  display: none;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 2em;
+  width: 80px;
+  height: 80px;
+  opacity: 0%;
+  border: 4px solid black;
+  border-radius: 50%;
+  margin: 5px 1px 5px 1px;
+  padding: 15px 10px 0px 10px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  animation-name: sizein;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sizein {
+  0% {
+    transform: scale3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  100% {
+    transform: scale3d(0.75, 0.75, 0.75);
+    opacity: 100%;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 500px) {
+  button.scrollTop {
+    display: none;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+  button.scrollTop {
+    display: none;
+  }
+}
+
+/* ---------- Dividers ---------- */
+hr.instructiondivider {
+  margin: none;
+  visibility: hidden;
+  margin: 0px;
+}
+
+hr.cardheader {
+  width: 2.5em;
+  margin: 10px auto 10px auto;
+}
+
+/* ---------- Links ---------- */
+a:link {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+a:hover.clickableimage {
+  opacity: 1.0;
+  text-decoration: none;
+}
+
+/* ---------- Images ---------- */
+img.scrolltop {
+  width: 45px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+img.screenshots {
+  border-radius: 16px;
+}
+
+div.gallery {
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+/* Desktop view */
+@media (min-width: 500px) {
+  img.screenshots {
+    width: 200px;
+    animation-name: shrinkimage;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  img.screenshots:hover {
+    transform: scale(130%);
+    animation-name: enlargeimage;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+  div.gallery {
+    grid-template-columns: min-content;
+  }
+  img.screenshots {
+    width: 85vw;
+  }
+}
+
+/*--------------- Light mode colors ---------------*/
+@media (prefers-color-scheme: light) {
+
+  /* Body */
+  body {
+    background: white;
+  }
+
+  hr {
+    border: 1px solid black;
+  }
+
+  /* Header */
+  div.header {
+    background-color: #F0F9F9;
+  }
+
+  /* Cards */
+  div.card {
+    background-color: #F0F9F9;
+  }
+
+  div.widecard {
+    background-color: #F0F9F9;
+  }
+
+  h3.cardsectiontitle {
+    background-color: #add;
+    color: #0e2323;
+  }
+
+  div.cardsection {
+    color: black;
+  }
+
+  /* Links */
+  a:link {
+    color: black;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  /* Buttons */
+  button {
+    background-color: #aadddd;
+    color: #0e2323;
+  }
+
+  button:hover {
+    background-color: #57bcbc;
+    color: white;
+    box-shadow: 0px 0px 3px lightgrey;
+  }
+
+  button.back {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  button.back:hover {
+    background-color: lightblue;
+    color: black;
+  }
+
+  button.scrollTop {
+    background-color: white;
+    color: black;
+  }
+
+  /* Text */
+  em.code {
+    background-color: white;
+  }
+
+  /* Dividers */
+  hr.cardheader {
+    border: 1px solid gray;
+  }
+
+  /* Animations */
+  @keyframes enlargeimage {
+    0% {
+      transform: scale(100%);
+      box-shadow: 0px 0px 0px 1500px rgba(255, 255, 255, 0);
+      z-index: 999;
+    }
+
+    100% {
+      transform: scale(130%);
+      box-shadow: 0px 0px 0px 1500px rgba(255, 255, 255, 0.9);
+      z-index: 999;
+    }
+  }
+
+  @keyframes shrinkimage {
+    0% {
+      transform: scale(130%);
+      box-shadow: 0px 0px 0px 1500px rgba(255, 255, 255, 0.9);
+    }
+
+    100% {
+      transform: scale(100%);
+      box-shadow: 0px 0px 0px 1500px rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+/*--------------- Dark mode colors ---------------*/
+@media (prefers-color-scheme: dark) {
+
+  /* Body */
+  body {
+    background: #0f0f0f;
+    color: white;
+  }
+
+  hr {
+    border: 1px solid grey;
+  }
+
+  /* Header */
+  div.header {
+    background-color: #1f1f1f;
+  }
+
+  /* Cards */
+  div.card {
+    background-color: #222;
+  }
+
+  div.widecard {
+    background-color: #222;
+  }
+
+  h3.cardsectiontitle {
+    background-color: #1c4646;
+    color: #aadddd;
+  }
+
+  div.cardsection {
+    color: lightgrey;
+    background-color: #0f0f0f;
+  }
+
+  /* Links */
+  a:link {
+    color: white;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  /* Buttons */
+  button {
+    background-color: #1c4646;
+    color: #aadddd;
+  }
+
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  button.back {
+    background-color: white;
+    color: black;
+  }
+
+  button.back:hover {
+    background-color: lightblue;
+    color: black;
+  }
+
+  button.scrollTop {
+    background-color: #222;
+    color: white;
+    border: 4px solid #333;
+  }
+
+  img.scrolltop {
+    filter: invert(93%) sepia(2%) saturate(180%) hue-rotate(22deg) brightness(85%) contrast(86%);
+  }
+
+  /* Text */
+  em.code {
+    color: black;
+    background-color: grey;
+  }
+
+  /* Dividers */
+  hr.cardheader {
+    border: 1px solid lightgray;
+  }
+
+  /* Animations */
+  @keyframes enlargeimage {
+    0% {
+      transform: scale(100%);
+      box-shadow: 0px 0px 0px 1500px rgba(0, 0, 0, 0);
+      z-index: 999;
+    }
+
+    100% {
+      transform: scale(130%);
+      box-shadow: 0px 0px 0px 1500px rgba(0, 0, 0, 0.9);
+      z-index: 999;
+    }
+  }
+
+  @keyframes shrinkimage {
+    0% {
+      transform: scale(130%);
+      box-shadow: 0px 0px 0px 1500px rgba(0, 0, 0, 0.9);
+    }
+
+    100% {
+      transform: scale(100%);
+      box-shadow: 0px 0px 0px 1500px rgba(0, 0, 0, 0);
+    }
+  }
+}
