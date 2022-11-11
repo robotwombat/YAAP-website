@@ -1,6 +1,6 @@
 {
-    "name": "Project Penguin",
-    "short_name": "Project Penguin",
+    "name": "YAAP",
+    "short_name": "YAAP",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#add8e6",
-    "background_color": "#add8e6",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
