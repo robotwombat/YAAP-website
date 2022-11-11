@@ -424,20 +424,20 @@ div.gallery {
 
   /* Header */
   div.header {
-    background-color: #F0F9F9;
+    background-color: #F0F5F9;
   }
 
   /* Cards */
   div.card {
-    background-color: #F0F9F9;
+    background-color: #F0F5F9;
   }
 
   div.widecard {
-    background-color: #F0F9F9;
+    background-color: #F0F5F9;
   }
 
   h3.cardsectiontitle {
-    background-color: #add;
+    background-color: #aacadd;
     color: #0e2323;
   }
 
@@ -456,7 +456,7 @@ div.gallery {
 
   /* Buttons */
   button {
-    background-color: #aadddd;
+    background-color: #aacadd;
     color: #0e2323;
   }
 
@@ -549,7 +549,7 @@ div.gallery {
 
   h3.cardsectiontitle {
     background-color: #1c4646;
-    color: #aadddd;
+    color: #aacadd;
   }
 
   div.cardsection {
@@ -569,7 +569,7 @@ div.gallery {
   /* Buttons */
   button {
     background-color: #1c4646;
-    color: #aadddd;
+    color: #aacadd;
   }
 
   button:hover {
