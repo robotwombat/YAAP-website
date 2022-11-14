@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Created by robotwombat -->
+
+<head>
+  <!-- Import CSS -->
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <!-- Scale page to display width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Header -->
+  <div class="header">
+    <a class="clickableimage" target="_top" href="./index.html">
+      <img class="headerlogo" src="images/yaap-logo.jpg" alt="Penguin Emoji Logo" style="width:100px; height:100px;">
+    </a>
+    <h1 class="headertitle">YAAP</h1>
+    <p class="header">Yet Another AOSP Project</p>
+  </div>
+  <!-- Load in scroll top button -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function() {
+      var scrolltop = $("#scrolltop");
+      scrolltop.load("scrolltop.html")
+    });
+  </script>
+  <!-- Page title and favicons -->
+  <title> YAAP | Yet Another AOSP Project </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#33cdc6">
+  <meta name="apple-mobile-web-app-title" content="Project Penguin">
+  <meta name="application-name" content="Project Penguin">
+  <meta name="msapplication-TileColor" content="#33cdc6">
+</head>
+
+<body>
+  <div id="scrolltop"></div>
+  <div class="onecolumncardholder">
+    <div class="card" id="downloads">
+      <img class="cardicon" src="./images/phone-emoji.svg">
+      <br>
+      <h3> OnePlus Downloads </h3>
+      <button class="uniformsize" type="button" onclick="window.open('https://mirror.codebucket.de/yaap/guacamoleb/', '_blank')">OP7</button>
+      <button class="uniformsize" type="button" onclick="window.open('https://mirror.codebucket.de/yaap/guacamole/', '_blank')">OP7 Pro</button>
+      <button class="uniformsize" type="button" onclick="window.open('https://mirror.codebucket.de/yaap/hotdogb/', '_blank')">OP7T</button>
+      <button class="uniformsize" type="button" onclick="window.open('https://mirror.codebucket.de/yaap/hotdog/', '_blank')">OP7T Pro</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://github.com/robotwombat/projectpenguin" style="font-weight: normal;"> Made with ❤️ by Robotwombat </a>
+  </div>
+</body>
+
+</html>
