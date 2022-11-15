@@ -2,6 +2,11 @@
   font-family: Arial;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+
+  --light-bg-color: #F0F5F9;
+  --dark-bg-color: #222;
+  --light-button-bg: #aacadd;
+  --dark-button-bg: #1c3a46;
 }
 
 @font-face {
@@ -424,20 +429,20 @@ div.gallery {
 
   /* Header */
   div.header {
-    background-color: #F0F5F9;
+    background-color: var(--light-bg-color);
   }
 
   /* Cards */
   div.card {
-    background-color: #F0F5F9;
+    background-color: var(--light-bg-color);
   }
 
   div.widecard {
-    background-color: #F0F5F9;
+    background-color: var(--light-bg-color);
   }
 
   h3.cardsectiontitle {
-    background-color: #aacadd;
+    background-color: var(--light-button-bg);
     color: #0e2323;
   }
 
@@ -456,7 +461,7 @@ div.gallery {
 
   /* Buttons */
   button {
-    background-color: #aacadd;
+    background-color: var(--light-button-bg);
     color: #0e2323;
   }
 
@@ -535,21 +540,21 @@ div.gallery {
 
   /* Header */
   div.header {
-    background-color: #1f1f1f;
+    background-color: var(--dark-bg-color);
   }
 
   /* Cards */
   div.card {
-    background-color: #222;
+    background-color: var(--dark-bg-color);
   }
 
   div.widecard {
-    background-color: #222;
+    background-color: var(--dark-bg-color);
   }
 
   h3.cardsectiontitle {
     background-color: #1c4646;
-    color: #aacadd;
+    color: var(--light-button-bg);
   }
 
   div.cardsection {
@@ -568,8 +573,8 @@ div.gallery {
 
   /* Buttons */
   button {
-    background-color: #1c3a46;
-    color: #aacadd;
+    background-color: var(--dark-button-bg);
+    color: var(--light-button-bg);
   }
 
   button:hover {
@@ -588,7 +593,7 @@ div.gallery {
   }
 
   button.scrollTop {
-    background-color: #222;
+    background-color: var(--dark-bg-color);
     color: white;
     border: 4px solid #333;
   }
